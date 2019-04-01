@@ -127,13 +127,13 @@ def customizePom(pom) {
         root.children().last() + {
             resolveStrategy = Closure.DELEGATE_FIRST
 
-            name 'Simple API Types'
-            description 'Simple types for use in implementing financial APIs'
-            url 'https://github.com/Bankdata/simple-types'
+            name 'JAX-RS Prometheus Exporter Endpoint'
+            description 'Implementation of simple JAX-RS endpoint to export Prometheus metrics.'
+            url 'https://github.com/Bankdata/prometheus-jaxrs-exporter'
             scm {
-                connection 'scm:git:https://github.com/Bankdata/simple-types.git'
-                developerConnection 'scm:git:https://github.com/Bankdata/simple-types.git'
-                url 'https://github.com/Bankdata/simple-types'
+                connection 'scm:git:https://github.com/Bankdata/prometheus-jaxrs-exporter.git'
+                developerConnection 'scm:git:https://github.com/Bankdata/prometheus-jaxrs-exporter.git'
+                url 'https://github.com/Bankdata/prometheus-jaxrs-exporter'
                 tag 'HEAD'
             }
             licenses {
