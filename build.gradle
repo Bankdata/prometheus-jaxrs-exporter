@@ -28,9 +28,14 @@ repositories {
 }
 
 dependencies {
-    compile(group: 'io.prometheus', name: 'simpleclient_servlet', version: project['io.prometheus.version'])
+    compile(group: 'io.prometheus', name: 'simpleclient_common', version: project['io.prometheus.version'])
+    compileOnly(group: 'javax.annotation', name: 'javax.annotation-api', version: project['javax.annotation.version'])
+    compileOnly(group: 'javax.ws.rs', name: 'javax.ws.rs-api', version: project['javax.ws.rs.version'])
     testCompile(group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: project['org.junit.jupiter.version'])
+    testCompile(group: 'javax.ws.rs', name: 'javax.ws.rs-api', version: project['javax.ws.rs.version'])
+    testCompile(group: 'io.prometheus', name: 'simpleclient_hotspot', version: project['io.prometheus.version'])
     testRuntime(group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: project['org.junit.jupiter.version'])
+    testRuntime(group: 'org.glassfish.jersey.core', name: 'jersey-common', version: project['org.glassfish.jersey.core.version'])
 }
 
 model {
